@@ -136,7 +136,7 @@ nav {
 /* ── HERO ── */
 .hero {
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 60%, #1E40AF 100%);
-  padding: 88px 32px 80px;
+  padding: 96px 32px 96px;
   position: relative; overflow: hidden;
 }
 .hero::before {
@@ -167,6 +167,10 @@ nav {
 }
 .hero-tag::before { content:''; width:7px; height:7px; border-radius:50%; background:#4ADE80; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.hero-info-line {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #93C5FD; margin-bottom: 14px;
+}
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(32px, 5vw, 52px);
@@ -175,6 +179,22 @@ nav {
   letter-spacing: -0.02em;
 }
 .hero h1 em { font-style: italic; color: #93C5FD; }
+.hero h1 .lead {
+  font-weight: 300; font-size: 0.6em; color: rgba(255,255,255,0.72);
+  letter-spacing: 0.01em;
+}
+.hero h1 .em-strong {
+  font-weight: 700; font-style: italic; color: white;
+}
+.hero h1 .em-accent {
+  font-weight: 800; color: #93C5FD; text-transform: uppercase;
+  font-size: 0.78em; letter-spacing: 0.04em;
+}
+.hero h1 .em-final {
+  display: inline-block; margin-top: 10px;
+  font-weight: 800; font-style: italic; color: #93C5FD;
+  font-size: 1.2em; letter-spacing: -0.01em;
+}
 .hero-sub {
   font-size: 17px; color: rgba(255,255,255,0.78);
   margin-bottom: 36px; font-weight: 300; line-height: 1.7;
@@ -441,9 +461,9 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
   <div class="hero-inner">
     <div>
       <div class="hero-tag">📍 Guadassuar · Desde 2018</div>
-      <h1>Grupos de <em>4 alumnos</em>,<br>no de 25</h1>
-      <p class="hero-sub">Refuerzo escolar en Guadassuar para Primaria, ESO y Bachillerato. Aquí no eres un número de lista: te conozco por tu nombre desde el primer día.</p>
-      <div class="hero-actions">
+      <div class="hero-info-line">Refuerzo escolar · Primaria, ESO y Bachillerato</div>
+      <h1><span class="lead">Me preocupo por</span> <span class="em-strong">conocer a cada alumno</span>,<br><span class="lead">y</span> <span class="em-accent">cada semana</span> <span class="lead">analizamos su evolución,</span><br><span class="em-final">no lo abandono.</span></h1>
+      <div class="hero-actions" style="margin-top:32px;">
         <a href="https://wa.me/34622011814?text=Hola%20Elena!%20Me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20las%20clases." class="btn btn-white" target="_blank" rel="noopener noreferrer">
           📲 Pedir información
         </a>
@@ -451,7 +471,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-stat-row">
+      <div class="hero-stat-row" style="max-width:320px;">
         <div class="hero-stat">
           <div class="hero-stat-num">+7</div>
           <div class="hero-stat-label">Años de experiencia</div>
@@ -460,16 +480,6 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
           <div class="hero-stat-num">4</div>
           <div class="hero-stat-label">Máx. alumnos/grupo</div>
         </div>
-      </div>
-      <div class="hero-card">
-        <span class="hero-card-icon">🎓</span>
-        <div class="hero-card-title">Pedagogía Terapéutica</div>
-        <div class="hero-card-sub">Especialización que marca la diferencia en cómo se enseña</div>
-      </div>
-      <div class="hero-card">
-        <span class="hero-card-icon">📍</span>
-        <div class="hero-card-title">Guadassuar, Valencia</div>
-        <div class="hero-card-sub">Clases presenciales · Atención cercana y personalizada</div>
       </div>
     </div>
   </div>
@@ -490,9 +500,8 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
     <div>
       <div class="section-label">Sobre mí</div>
       <h2 class="section-title">Hola, soy <em>Elena</em> 👋</h2>
-      <p>Soy profesora de Educación Primaria, especializada en <strong>Pedagogía Terapéutica</strong>. Llevo desde 2018 ayudando a alumnos de toda la provincia de Valencia a mejorar su rendimiento académico y, sobre todo, su confianza.</p>
-      <p>Mi método se basa en detectar exactamente dónde está el problema de cada alumno, no en repasar todo desde el principio. Así avanzamos más rápido y con mucho menos estrés.</p>
-      <p>Trabajo con una atención cercana y adaptada, porque cada alumno es diferente y merece un enfoque a su medida.</p>
+      <p>Soy profesora de Educación Primaria, especializada en <strong>Pedagogía Terapéutica</strong>. Desde 2018 ayudo a alumnos de toda la provincia de Valencia a mejorar su rendimiento y su confianza.</p>
+      <p>Detecto dónde está el problema real de cada alumno, en vez de repasarlo todo desde cero. Así avanzamos más rápido y con menos estrés — con un trato cercano y a su medida.</p>
       <div class="about-tags">
         <span class="tag">Pedagogía Terapéutica</span>
         <span class="tag">Primaria · ESO · Bach</span>
@@ -516,17 +525,17 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
       <div class="service-card">
         <span class="service-icon">📚</span>
         <h3>Repaso y refuerzo</h3>
-        <p>Trabajamos los temas donde más flojea, sin perder tiempo con lo que ya domina.</p>
+        <p>Nos centramos en lo que más flojea.</p>
       </div>
       <div class="service-card">
         <span class="service-icon">✏️</span>
         <h3>Apoyo en deberes</h3>
-        <p>Acompañamiento diario para crear hábitos de estudio y resolver dudas en el momento.</p>
+        <p>Hábitos de estudio y dudas resueltas al momento.</p>
       </div>
       <div class="service-card">
         <span class="service-icon">🎯</span>
         <h3>Preparación de exámenes</h3>
-        <p>Estrategias concretas y ejercicios específicos para llegar a cada examen con seguridad.</p>
+        <p>Estrategia y práctica para llegar con seguridad.</p>
       </div>
       <div class="service-card">
         <span class="service-icon">🌍</span>
@@ -548,17 +557,17 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
     <div class="level-card">
       <span class="level-icon">🌱</span>
       <h3>Primaria</h3>
-      <p>Construimos una base sólida y hábitos de estudio desde el principio.</p>
+      <p>Base sólida y buenos hábitos desde el principio.</p>
     </div>
     <div class="level-card">
       <span class="level-icon">📖</span>
       <h3>ESO</h3>
-      <p>Acompañamos los años de mayor exigencia y cambio con método y cercanía.</p>
+      <p>Método y cercanía en los años más exigentes.</p>
     </div>
     <div class="level-card">
       <span class="level-icon">🚀</span>
       <h3>Bachillerato</h3>
-      <p>Preparación intensiva para EBAU y refuerzo de gramática inglesa , castellano y valenciano.</p>
+      <p>Preparación para EBAU e idiomas.</p>
     </div>
   </div>
 </div>
