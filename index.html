@@ -139,9 +139,20 @@ nav {
   padding: 96px 32px 96px;
   position: relative; overflow: hidden;
 }
+.hero-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(135deg, rgba(29,78,216,0.88) 0%, rgba(37,99,235,0.82) 60%, rgba(30,64,175,0.9) 100%);
+}
+@media (max-width: 720px) {
+  .hero-video { display: none; }
+}
 .hero::before {
   content: '';
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; z-index: 2;
   background:
     radial-gradient(ellipse 600px 400px at 80% 50%, rgba(255,255,255,0.06) 0%, transparent 70%),
     radial-gradient(ellipse 300px 300px at 10% 80%, rgba(255,255,255,0.04) 0%, transparent 60%);
@@ -151,7 +162,7 @@ nav {
   max-width: 960px; margin: 0 auto;
   display: grid; grid-template-columns: 1.1fr 1fr;
   gap: 56px; align-items: center;
-  position: relative; z-index: 1;
+  position: relative; z-index: 3;
 }
 @media (max-width: 720px) {
   .hero-inner { grid-template-columns: 1fr; }
@@ -458,6 +469,10 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div>
       <div class="hero-tag">📍 Guadassuar · Desde 2018</div>
