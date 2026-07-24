@@ -159,13 +159,10 @@ nav {
   pointer-events: none;
 }
 .hero-inner {
-  max-width: 960px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.1fr 1fr;
-  gap: 56px; align-items: center;
+  max-width: 720px; margin: 0 auto;
   position: relative; z-index: 3;
 }
 @media (max-width: 720px) {
-  .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
 }
 .hero-tag {
@@ -191,21 +188,16 @@ nav {
 }
 .hero h1 em { font-style: italic; color: #93C5FD; }
 .hero h1 .lead {
-  font-weight: 300; font-size: 0.6em; color: rgba(255,255,255,0.72);
-  letter-spacing: 0.01em;
+  font-weight: 300; font-size: 0.62em; color: rgba(255,255,255,0.75);
 }
-.hero h1 .em-strong {
+.hero h1 .accent {
   font-weight: 700; font-style: italic; color: white;
 }
-.hero h1 .em-accent {
-  font-weight: 800; color: #93C5FD; text-transform: uppercase;
-  font-size: 0.78em; letter-spacing: 0.04em;
+.hero h1 .h1-line {
+  display: block;
+  margin-bottom: 14px;
 }
-.hero h1 .em-final {
-  display: inline-block; margin-top: 10px;
-  font-weight: 800; font-style: italic; color: #93C5FD;
-  font-size: 1.2em; letter-spacing: -0.01em;
-}
+.hero h1 .h1-line:last-child { margin-bottom: 0; }
 .hero-sub {
   font-size: 17px; color: rgba(255,255,255,0.78);
   margin-bottom: 36px; font-weight: 300; line-height: 1.7;
@@ -474,27 +466,17 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div>
-      <div class="hero-tag">📍 Guadassuar · Desde 2018</div>
-      <div class="hero-info-line">Refuerzo escolar · Primaria, ESO y Bachillerato</div>
-      <h1><span class="lead">Me preocupo por</span> <span class="em-strong">conocer a cada alumno</span>,<br><span class="lead">y</span> <span class="em-accent">cada semana</span> <span class="lead">analizamos su evolución,</span><br><span class="em-final">no lo abandono.</span></h1>
-      <div class="hero-actions" style="margin-top:32px;">
-        <a href="https://wa.me/34622011814?text=Hola%20Elena!%20Me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20las%20clases." class="btn btn-white" target="_blank" rel="noopener noreferrer">
-          📲 Pedir información
-        </a>
-        <a href="#precios" class="btn btn-outline-white">Ver precios</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-stat-row" style="max-width:320px;">
-        <div class="hero-stat">
-          <div class="hero-stat-num">+7</div>
-          <div class="hero-stat-label">Años de experiencia</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">4</div>
-          <div class="hero-stat-label">Máx. alumnos/grupo</div>
-        </div>
+    <div class="hero-tag">📍 Guadassuar · Desde 2018</div>
+    <div class="hero-info-line">Refuerzo escolar · Primaria, ESO y Bachillerato</div>
+    <h1><span class="lead">Me preocupo por</span> <span class="accent">conocer a cada alumno</span>. <span class="lead">Analizamos juntos</span> <span class="accent">cada semana</span> <span class="lead">su evolución.</span></h1>
+    <div class="hero-actions" style="margin-top:32px; align-items:center;">
+      <a href="https://wa.me/34622011814?text=Hola%20Elena!%20Me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20las%20clases." class="btn btn-white" target="_blank" rel="noopener noreferrer">
+        📲 Pedir información
+      </a>
+      <a href="#precios" class="btn btn-outline-white">Ver precios</a>
+      <div class="hero-stat" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:10px 18px; display:flex; align-items:center; gap:10px;">
+        <span style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:white;">4</span>
+        <span style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.2; text-align:left;">Máx.<br>alumnos/grupo</span>
       </div>
     </div>
   </div>
@@ -881,4 +863,3 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 </script>
 </body>
-</html>
